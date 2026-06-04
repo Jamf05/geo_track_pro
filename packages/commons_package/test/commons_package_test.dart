@@ -1,4 +1,4 @@
-import 'package:commons_package/src/common_package.dart';
+import 'package:commons_package/src/main.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {

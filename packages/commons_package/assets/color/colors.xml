@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <!-- Primary -->
+    <color name="oxford_blue">#001C4B</color>
+    <color name="yale_blue">#0F4298</color>
+    <color name="blue_yonder">#3F68AC</color>
+    <color name="cerulean_frost">#6F8EC1</color>
+    <!-- Secondary -->
+    <color name="light_sky_blue">#88C0FF</color>
+    <color name="baby_blue_eyes">#A0CDFF</color>
+    <color name="fresh_air">#B8D9FF</color>
+    <color name="water">#CFE6FF</color>
+    <!-- Degraded 1 -->
+    <color name="rich_black_1">#060A21</color>
+    <color name="y_in_mn_blue">#2A4C86</color>
+    <color name="rich_black_2">#060A22</color>
+    <!-- Degraded 2 -->
+        <!-- <color name="light_sky_blue">#88C0FF</color> -->
+        <!-- <color name="white">#FFFFFF</color> -->
+    <!-- Degraded 3 -->
+        <!-- <color name="yale_blue">#0F4298</color> -->
+    <color name="ghost_white">#F6F8FB</color>
+    <!-- Text -->
+    <color name="eerie_black">#191919</color>
+    <color name="slate_gray">#728197</color>
+    <color name="chinese_silver">#CCCCCC</color>
+    <color name="anti_flash_white">#F3F3F3</color>
+        <!-- <color name="ghost_white">#F6F8FB</color> -->
+        <!-- <color name="white">#FFFFFF</color> -->
+    <!-- Background -->
+    <color name="lotion">#FAFAFA</color>
+    <color name="jet">#363636</color>
+    <color name="rich_black">#04081e</color>
+    <color name="bright_gray">#E6F3F3</color>
+    <color name="gray">#09E9E9E</color>
+    <color name="eerie_black_2">#1D1B20</color>
+    <color name="medium_vermilion">#DE583D</color>
+    
+    <!-- Actions -->
+    <color name="picton_blue">#3ABFF8</color>
+    <color name="salem">#20853B</color>
+    <color name="orange_yellow">#FBBD23</color>
+    <color name="ue_red">#B1000F</color>
+    <color name="columbia_blue">#CBD4E1</color>
+    <color name="cadet_grey">#9AA8BC</color>
+    <color name="light_grayish_blue">#E2E6E9</color>
+    <!-- <color name="anti_flash_white">#F3F3F3</color> -->
+
+    <!-- ToggleSwitch -->
+    <color name="bright_gray_2">#F0EFE9</color>
+    <color name="charleston_green">#2C2924</color>
+
+    <!-- AdvanceAreaChart -->
+    <color name="light_sea_green">#14B8A6</color>
+    <color name="blueberry">#3B82F6</color>
+    <color name="very_light_blue">#6366F1</color>
+    <color name="raspberry_pink">#EC4899</color>
+    <color name="Orange">#F59E0B</color>
+    <color name="Jonquil">#FACC15</color>
+    
+</resources>

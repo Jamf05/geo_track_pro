@@ -1,3 +1,3 @@
 library;
 
-export 'src/common_package.dart';
+export 'src/core/core.dart';
