@@ -2,7 +2,7 @@ part of '../design.dart';
 
 class ThemeFoundation {
   ThemeFoundation._internal();
-  static final ThemeData light = ThemeData(
+  static final ThemeData lightTheme = ThemeData(
 
       /**
      * scaffoldBackgroundColor
@@ -120,7 +120,7 @@ class ThemeFoundation {
         displaySmall: FontsToken.poppinsM12,
       ));
 
-  static final ThemeData dark = ThemeData(
+  static final ThemeData darkTheme = ThemeData(
 
       /**
      * scaffoldBackgroundColor
