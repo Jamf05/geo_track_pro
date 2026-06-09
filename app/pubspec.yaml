@@ -23,6 +23,7 @@ dependencies:
   go_router: ^17.3.0
   home_package:
     path: ../packages/home_package
+  intl: ^0.20.2
   riverpod: ^3.2.1
 
 dev_dependencies:
