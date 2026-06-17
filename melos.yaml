@@ -10,8 +10,11 @@ scripts:
   analyze:
     exec: dart analyze
 
+  build:
+    exec: fvm dart run build_runner build --delete-conflicting-outputs && fvm flutter gen-l10n
+
   get:
-    run: melos exec -c 1  -- "flutter pub get"
+    exec: fvm flutter pub get
 
   clean:
-     run: melos exec -c 1  -- "flutter clean"
+    exec: fvm flutter clean
