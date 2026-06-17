@@ -1,0 +1,8 @@
+
+arb-dir: assets/locale
+template-arb-file: app_es.arb
+output-dir: lib/src/generated
+output-localization-file: geolocation_localizations.dart
+output-class: GeolocationLocalizations
+
+nullable-getter: false

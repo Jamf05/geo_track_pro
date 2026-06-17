@@ -1,0 +1,33 @@
+name: geolocation_package
+description: "A new Flutter package project."
+version: 0.0.1
+homepage:
+
+publish_to: none
+
+environment:
+  sdk: ^3.10.0
+  flutter: ">=1.17.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localization: ^0.4.0
+  intl: ^0.20.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  build_runner: ^2.15.0
+  flutter_gen: ^5.14.1
+  flutter_gen_runner: ^5.14.1
+  flutter_lints: ^6.0.0
+
+flutter:
+  generate: true
+  uses-material-design: true
+  assets:
+    - assets/locale/
+
+flutter_gen:
+  output: lib/src/generated/
