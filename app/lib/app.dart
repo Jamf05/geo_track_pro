@@ -2,6 +2,7 @@ import 'package:auth_package/auth_package.dart';
 import 'package:commons_package/common_package.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:geolocation_package/geolocation_package.dart';
 import 'package:home_package/home_package.dart';
 
 import 'config/app_router.dart';
@@ -16,6 +17,7 @@ class App extends StatelessWidget {
       localizationsDelegates: const [
         AuthLocalizations.delegate,
         HomeLocalizations.delegate,
+        GeolocationLocalizations.delegate,
         GlobalMaterialLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate,
         GlobalCupertinoLocalizations.delegate,

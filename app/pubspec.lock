@@ -387,6 +387,13 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "4.0.0"
+  geolocation_package:
+    dependency: "direct main"
+    description:
+      path: "../packages/geolocation_package"
+      relative: true
+    source: path
+    version: "0.0.1"
   glob:
     dependency: transitive
     description:

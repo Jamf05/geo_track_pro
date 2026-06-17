@@ -20,6 +20,8 @@ dependencies:
     sdk: flutter
   flutter_localization: ^0.4.0
   flutter_riverpod: ^3.3.1
+  geolocation_package:
+    path: ../packages/geolocation_package
   go_router: ^17.3.0
   home_package:
     path: ../packages/home_package
