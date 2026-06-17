@@ -25,6 +25,9 @@ dev_dependencies:
 
 flutter:
   generate: true
+  uses-material-design: true
+  assets:
+    - assets/locale/
 
 flutter_gen:
-  output: lib/generated/
+  output: lib/src/generated/
