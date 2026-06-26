@@ -10,28 +10,19 @@ final class AppRouter {
   AppRouter._();
 
   static const String initialRoute = '/';
+  static const String loginRoute = AuthRoutes.loginRoute;
   static const String homeRoute = '/white-home';
-  
+
   static final GoRouter goRouter = GoRouter(
-    initialLocation: '/',
+    initialLocation: '/login',
     routes: [
       GoRoute(path: initialRoute, builder: (context, state) => const WhitePage()),
+      GoRoute(path: loginRoute, builder: AuthRoutes.buildLoginPage),
       GoRoute(path: AuthRoutes.whiteRoute, builder: AuthRoutes.buildWhitePage),
       GoRoute(path: HomeRoutes.whiteRoute, builder: HomeRoutes.buildWhitePage),
-      // GoRoute(
-      //   path: '/details/:id',
-      //   builder: (context, state) =>
-      //       DetailsScreen(id: state.pathParameters['id']!),
-      // ),
     ],
     redirect: (BuildContext context, GoRouterState state) {
-      // Aquí puedes agregar lógica de redirección basada en la autenticación o cualquier otra condición
-      // Por ejemplo:
-      // final isLoggedIn = checkIfUserIsLoggedIn();
-      // if (!isLoggedIn && state.subloc != '/login') {
-      //   return '/login';
-      // }
-      return null; // No redirigir
+      return null;
     },
     errorPageBuilder: (context, state) => MaterialPage(
       child: Scaffold(
