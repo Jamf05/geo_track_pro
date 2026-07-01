@@ -1,3 +1,8 @@
+---
+description: 'Instructions for writing code in this repository that respects the lint rules defined in `analysis_options.yaml`.'
+applyTo: '**/*.dart'
+---
+
 # Copilot Instructions — Flutter / Dart Lint Rules
 
 > This document explains, rule by rule, the lint configuration defined in `analysis_options.yaml` for this project. It combines two rule sources:
