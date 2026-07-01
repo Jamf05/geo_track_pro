@@ -3,18 +3,21 @@ name: geo_track_workspace
 sdkPath: .fvm/flutter_sdk
 
 packages:
-  - "app/*"
+  - "app/"
   - "packages/**"
 
 scripts:
   analyze:
-    exec: dart analyze
+    exec: sh "$MELOS_ROOT_PATH/.scripts/linter.sh"
 
   build:
-    exec: fvm dart run build_runner build --delete-conflicting-outputs && fvm flutter gen-l10n
+    exec: sh "$MELOS_ROOT_PATH/.scripts/build.sh"
 
   get:
     exec: fvm flutter pub get
 
   clean:
     exec: fvm flutter clean
+
+  purge:
+    exec: sh "$MELOS_ROOT_PATH/.scripts/purge.sh"
