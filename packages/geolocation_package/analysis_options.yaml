@@ -72,6 +72,7 @@ dart_code_linter:
     - double-literal-format
     - avoid-unrelated-type-assertions
     - avoid-unnecessary-type-assertions
+    - prefer-single-declaration-per-file
   metrics:
     source-lines-of-code: 250
     number-of-parameters: 4

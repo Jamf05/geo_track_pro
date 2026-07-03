@@ -22,6 +22,7 @@ dev_dependencies:
   flutter_gen: ^5.14.1
   flutter_gen_runner: ^5.14.1
   flutter_lints: ^6.0.0
+  dart_code_linter: ^4.1.6
 
 flutter:
   generate: true
