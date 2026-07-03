@@ -18,11 +18,11 @@ dependencies:
   equatable: ^2.0.8
   flutter:
     sdk: flutter
-  flutter_localization: ^0.4.0
+  flutter_localization: ^0.3.3
   flutter_riverpod: ^3.3.1
   geolocation_package:
     path: ../packages/geolocation_package
-  go_router: ^17.3.0
+  go_router: ^16.3.0
   home_package:
     path: ../packages/home_package
   intl: ^0.20.2

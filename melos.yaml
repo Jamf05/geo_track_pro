@@ -13,11 +13,11 @@ scripts:
   build:
     exec: sh "$MELOS_ROOT_PATH/.scripts/build.sh"
 
-  get:
-    exec: fvm flutter pub get
+  pub_get:
+    exec: sh "$MELOS_ROOT_PATH/.scripts/pub_get.sh"
 
   clean:
-    exec: fvm flutter clean
+    exec: sh "$MELOS_ROOT_PATH/.scripts/clean.sh"
 
   purge:
     exec: sh "$MELOS_ROOT_PATH/.scripts/purge.sh"

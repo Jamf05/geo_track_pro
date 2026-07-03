@@ -1,0 +1,10 @@
+# melos_managed_dependency_overrides: auth_package,commons_package,geolocation_package,home_package
+dependency_overrides:
+  auth_package:
+    path: ../packages/auth_package
+  commons_package:
+    path: ../packages/commons_package
+  geolocation_package:
+    path: ../packages/geolocation_package
+  home_package:
+    path: ../packages/home_package

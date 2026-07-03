@@ -1,0 +1,4 @@
+# melos_managed_dependency_overrides: commons_package
+dependency_overrides:
+  commons_package:
+    path: ../commons_package

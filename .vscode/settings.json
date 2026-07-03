@@ -5,6 +5,6 @@
     "**/.fvm": true
   },
   "search.exclude": {
-    "**/.fvm": true,
+    "**/.fvm": true
   }
 }
