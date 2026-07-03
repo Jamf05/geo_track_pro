@@ -2,14 +2,11 @@
 
 part of '../design.dart';
 
-/// For more information see:
-/// https://m3.material.io/styles/color/the-color-system/color-roles
+// For more information see:
+// https://m3.material.io/styles/color/the-color-system/color-roles
 
 class ColorsFoundation {
   final Brightness brightness;
-  static ColorsFoundation of(Brightness brightness) =>
-      ColorsFoundation._internal(brightness);
-  ColorsFoundation._internal(this.brightness);
 
   // primary
 
@@ -36,6 +33,10 @@ class ColorsFoundation {
   static const _DegradedColor degraded = _DegradedColor._();
 
   static const _AdvanceArea advanceArea = _AdvanceArea._();
+
+  static ColorsFoundation of(Brightness brightness) =>
+      ColorsFoundation._internal(brightness);
+  ColorsFoundation._internal(this.brightness);
 
   _ToggleSwitch get toggleSwitch => _ToggleSwitch._resolve(brightness);
 }
@@ -85,7 +86,10 @@ abstract class _Icon {
   final Color elevatedButtonBasic;
 
   const _Icon._(
-      this.appBarIcon, this.elevatedButtonNeutral, this.elevatedButtonBasic);
+    this.appBarIcon,
+    this.elevatedButtonNeutral,
+    this.elevatedButtonBasic,
+  );
 
   static _Icon _resolve(Brightness brightness) {
     switch (brightness) {
@@ -142,12 +146,12 @@ class _Background {
 }
 
 class _AdvanceArea {
-  final Color bco = ColorsToken.lightSeaGreen;
-  final Color bpo = ColorsToken.blueberry;
-  final Color eo = ColorsToken.veryLightBlue;
-  final Color oa = ColorsToken.raspberryPink;
-  final Color sdt = ColorsToken.orange;
-  final Color cei = ColorsToken.jonquil;
+  final Color bcoColor = ColorsToken.lightSeaGreen;
+  final Color bpoColor = ColorsToken.blueberry;
+  final Color eoColor = ColorsToken.veryLightBlue;
+  final Color oaColor = ColorsToken.raspberryPink;
+  final Color sdtColor = ColorsToken.orange;
+  final Color ceiColor = ColorsToken.jonquil;
 
   const _AdvanceArea._();
 }
@@ -159,7 +163,9 @@ class _Action {
   final Color negative = ColorsToken.ueRed;
   final Color darkNegative = ColorsToken.mediumVermilion;
   final Color disabledSolid = ColorsToken.antiFlashWhite;
-  final Color disabledTransparent = ColorsToken.antiFlashWhite.withValues(alpha: 26);
+  final Color disabledTransparent = ColorsToken.antiFlashWhite.withValues(
+    alpha: 26,
+  );
   final Color actionRegister = ColorsToken.lightGrayishBlue;
 
   _Action._();
@@ -240,8 +246,6 @@ class _ToggleSwitchLight implements _ToggleSwitch {
 }
 
 class _ToggleSwitchDark implements _ToggleSwitch {
-  _ToggleSwitchDark._();
-
   @override
   final Color background = ColorsToken.charlestonGreen;
 
@@ -250,6 +254,8 @@ class _ToggleSwitchDark implements _ToggleSwitch {
 
   @override
   final Color foregroundIcon = ColorsToken.charlestonGreen;
+
+  _ToggleSwitchDark._();
 
   @override
   Color get blackAndWithe => ColorsToken.white;

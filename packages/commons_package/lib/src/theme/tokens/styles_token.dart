@@ -1,8 +1,6 @@
 part of '../design.dart';
 
 class StylesToken {
-  StylesToken._internal();
-
   static const BorderRadius borderR4 = BorderRadius.all(Radius.circular(4));
   static const BorderRadius borderR8 = BorderRadius.all(Radius.circular(8));
   static const BorderRadius borderR12 = BorderRadius.all(Radius.circular(12));
@@ -18,4 +16,6 @@ class StylesToken {
   static const BorderSide borderSW2 = BorderSide(width: 2.0, style: BorderStyle.solid);
   static const BorderSide borderSW8 = BorderSide(width: 8.0, style: BorderStyle.solid);
   static const BorderSide borderSW24 = BorderSide(width: 24.0, style: BorderStyle.solid);
+
+  StylesToken._internal();
 }

@@ -10,4 +10,4 @@ export 'repository.dart';
 export 'result.dart';
 export 'state.dart';
 export 'ui_config.dart';
-export 'usecase.dart';
+export 'use_case.dart';

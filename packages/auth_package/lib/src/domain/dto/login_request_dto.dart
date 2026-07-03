@@ -9,15 +9,3 @@ class LoginRequestDto extends Dto {
     required this.password,
   });
 }
-
-class LoginResponseDto extends Dto {
-  final String id;
-  final String email;
-  final String name;
-
-  const LoginResponseDto({
-    required this.id,
-    required this.email,
-    required this.name,
-  });
-}

@@ -1,8 +1,6 @@
+import 'package:auth_package/auth_package.dart';
 import 'package:commons_package/common_package.dart';
 
-import '../domain/auth_repository.dart';
-import '../domain/login_dto.dart';
-import '../domain/user_entity.dart';
 
 class MockAuthRepository implements AuthRepository {
   final List<Map<String, String>> _mockUsers = [
@@ -56,7 +54,15 @@ class MockAuthRepository implements AuthRepository {
       );
     }
 
-    final user = userMap.first;
+    final user = userMap.firstOrNull;
+
+    if(user == null) {
+      return Result.error(
+        ExceptionFailure.decode(
+          Exception('FATAL ERROR: user is null'),
+        ),
+      );
+    }
 
     if (user['password'] != dto.password) {
       return Result.error(

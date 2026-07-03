@@ -1,7 +1,7 @@
 import 'package:commons_package/common_package.dart' hide State;
 import 'package:flutter/material.dart';
 
-import '../generated/auth_localizations.dart';
+import '../../generated/auth_localizations.dart';
 
 typedef LoginCallback = Future<void> Function({
   required String email,
@@ -73,6 +73,7 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     final l10n = AuthLocalizations.of(context);
+    final fonts = FontsFoundation.of(Brightness.light);
 
     return Scaffold(
       appBar: AppBar(
@@ -95,13 +96,13 @@ class _LoginPageState extends State<LoginPage> {
                 const SizedBox(height: 24),
                 Text(
                   l10n.loginWelcome,
-                  style: FontsFoundation.of(Brightness.light).title.h1B24,
+                  style: fonts.title.h1B24,
                   textAlign: TextAlign.center,
                 ),
                 const SizedBox(height: 8),
                 Text(
                   l10n.loginSubtitle,
-                  style: FontsFoundation.of(Brightness.light).paragraph.b2R16,
+                  style: fonts.paragraph.b2R16,
                   textAlign: TextAlign.center,
                 ),
                 const SizedBox(height: 32),

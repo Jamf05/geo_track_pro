@@ -1,24 +1,37 @@
 import 'dart:io';
 
 final class SocketConnectUtils {
-  static List<Future<bool>> createSocketFutures(
+  static Future<List<bool>> createSocketFutures(
     List<String> ips,
     List<String> ports,
     int timeoutMilliseconds,
-  ) {
-    final List<Future<bool>> socketFutures = [];
-    for (int i = 0; i < ips.length; i++) {
+  ) async {
+    final List<Future<bool>> socketFutures = <Future<bool>>[];
+    for (int index = 0; index < ips.length; index++) {
       socketFutures.add(
-        Socket.connect(
-          ips[i],
-          int.parse(ports[i]),
-          timeout: Duration(milliseconds: timeoutMilliseconds),
-        ).then((socket) {
-          socket.destroy();
-          return true;
-        }).catchError((_) => false),
+        _connectSocket(ips[index], ports[index], timeoutMilliseconds),
       );
     }
-    return socketFutures;
+
+    return Future.wait(socketFutures);
+  }
+
+  static Future<bool> _connectSocket(
+    String ip,
+    String port,
+    int timeoutMilliseconds,
+  ) async {
+    try {
+      final socket = await Socket.connect(
+        ip,
+        int.parse(port),
+        timeout: Duration(milliseconds: timeoutMilliseconds),
+      );
+      socket.destroy();
+
+      return true;
+    } catch (_) {
+      return false;
+    }
   }
 }

@@ -1,6 +1,6 @@
 import 'package:commons_package/common_package.dart';
 
-import 'user_entity.dart';
+import '../../domain/entity/user_entity.dart';
 
 abstract class AuthState extends State {
   const AuthState();

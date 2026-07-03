@@ -57,13 +57,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.13.1"
-  auth_package:
-    dependency: "direct main"
-    description:
-      path: "../packages/auth_package"
-      relative: true
-    source: path
-    version: "0.0.1"
   boolean_selector:
     dependency: transitive
     description:
@@ -176,15 +169,8 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "3.0.0"
-  commons_package:
-    dependency: "direct main"
-    description:
-      path: "../packages/commons_package"
-      relative: true
-    source: path
-    version: "0.0.1"
   connectivity_plus:
-    dependency: transitive
+    dependency: "direct main"
     description:
       name: connectivity_plus
       sha256: cad0e811a289ea2a941119dc483c204ec1684cbb9a8fc7351fe4a230b8313160
@@ -231,14 +217,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.0.2"
-  cupertino_icons:
-    dependency: "direct main"
-    description:
-      name: cupertino_icons
-      sha256: "41e005c33bd814be4d3096aff55b1908d419fde52ca656c8c47719ec745873cd"
-      url: "https://pub.dev"
-    source: hosted
-    version: "1.0.9"
   dart_code_linter:
     dependency: "direct dev"
     description:
@@ -272,7 +250,7 @@ packages:
     source: hosted
     version: "0.7.14"
   dio:
-    dependency: transitive
+    dependency: "direct main"
     description:
       name: dio
       sha256: ea2bad3c89a27635ce2d85cce4d6b199da49a5a48ec77b03e45b65a3b90922b0
@@ -419,13 +397,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "4.0.0"
-  geolocation_package:
-    dependency: "direct main"
-    description:
-      path: "../packages/geolocation_package"
-      relative: true
-    source: path
-    version: "0.0.1"
   glob:
     dependency: transitive
     description:
@@ -434,14 +405,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.1.3"
-  go_router:
-    dependency: "direct main"
-    description:
-      name: go_router
-      sha256: d8f590a69729f719177ea68eb1e598295e8dbc41bbc247fed78b2c8a25660d7c
-      url: "https://pub.dev"
-    source: hosted
-    version: "16.3.0"
   graphs:
     dependency: transitive
     description:
@@ -458,13 +421,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.0.0"
-  home_package:
-    dependency: "direct main"
-    description:
-      path: "../packages/home_package"
-      relative: true
-    source: path
-    version: "0.0.1"
   html:
     dependency: transitive
     description:

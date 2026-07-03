@@ -12,38 +12,34 @@ abstract class Failure implements EquatableMixin {
 }
 
 class ExceptionFailure extends Failure implements Exception {
+  final Exception? error;
+  final String message;
+  ExceptionFailure._({required this.message, this.error});
+
   factory ExceptionFailure.decode(Exception? error) {
     return ExceptionFailure._(error: error, message: error.toString());
   }
-
-  ExceptionFailure._({required this.message, this.error});
-
-  final Exception? error;
-
-  @override
-  final String message;
 
   @override
   bool? get stringify => true;
 }
 
 class DioFailure extends Failure implements Exception {
-  factory DioFailure.decode(DioException? error) {
-    return DioFailure._(
-      error: error,
-      statusCode: error?.response?.statusCode,
-      message: error?.response?.statusMessage ?? '',
-    );
-  }
-
+  final int? statusCode;
+  final DioException? error;
+  final String message;
   DioFailure._({required this.message, this.statusCode, this.error});
 
-  final int? statusCode;
+  factory DioFailure.decode(DioException? error) {
+    final Response<dynamic>? response = error?.response;
+    final String statusMessage = response?.statusMessage ?? '';
 
-  final DioException? error;
-
-  @override
-  final String message;
+    return DioFailure._(
+      error: error,
+      statusCode: response?.statusCode,
+      message: statusMessage,
+    );
+  }
 
   @override
   bool? get stringify => true;
@@ -53,16 +49,13 @@ class DioFailure extends Failure implements Exception {
 }
 
 class ErrorFailure extends Failure implements Error {
+  final Error? error;
+  final String message;
+  ErrorFailure._({required this.message, this.error});
+
   factory ErrorFailure.decode(Error? error) {
     return ErrorFailure._(error: error, message: error.toString());
   }
-
-  ErrorFailure._({required this.message, this.error});
-
-  final Error? error;
-
-  @override
-  final String message;
 
   @override
   bool? get stringify => true;
