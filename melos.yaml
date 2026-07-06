@@ -21,3 +21,9 @@ scripts:
 
   purge:
     exec: sh "$MELOS_ROOT_PATH/.scripts/purge.sh"
+
+  sync_setup:
+    packageFilters:
+      ignore: 
+        - "geo_track_pro"
+    exec: sh "$MELOS_ROOT_PATH/.scripts/sync_setup.sh"
