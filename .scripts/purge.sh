@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 fvm flutter clean && \
 rm -rf build && \
 rm -rf .dart_tool && \

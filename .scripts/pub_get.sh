@@ -1,3 +1,5 @@
 #!/bin/bash
 
-sleep 5 && fvm flutter pub get
+set -e
+
+fvm flutter pub get

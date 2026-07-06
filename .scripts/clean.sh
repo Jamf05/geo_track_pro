@@ -1,3 +1,5 @@
 #!/bin/bash
 
-sleep 5 && fvm flutter clean
+set -e
+
+fvm flutter clean

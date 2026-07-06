@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Running linter..."
+set -e
 
 fvm dart run dart_code_linter:metrics analyze lib --fatal-style --fatal-warnings --fatal-performance && \
 fvm dart run dart_code_linter:metrics check-unnecessary-nullable lib --fatal-found && \

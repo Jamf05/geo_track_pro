@@ -27,3 +27,6 @@ scripts:
       ignore: 
         - "geo_track_pro"
     exec: sh "$MELOS_ROOT_PATH/.scripts/sync_setup.sh"
+  
+  coverage:
+    exec: sh "$MELOS_ROOT_PATH/.scripts/coverage.sh"
