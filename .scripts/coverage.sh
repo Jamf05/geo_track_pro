@@ -10,6 +10,17 @@ else
 fi
 
 fvm flutter test --coverage
-lcov --ignore-errors unused --remove coverage/lcov.info 'lib/src/generated/*' -o coverage/lcov.info
-genhtml coverage/lcov.info -o coverage/html
-open coverage/html/index.htmlComo puedo 
+
+if [ -s coverage/lcov.info ]; then
+    echo "✅ Coverage report generated successfully."
+    lcov \
+        --ignore-errors unused \
+        --remove coverage/lcov.info \
+        'lib/src/generated/*' \
+        -o coverage/lcov.info
+    genhtml coverage/lcov.info -o coverage/html
+    open coverage/html/index.html 
+else
+    echo "❌ Coverage report generation failed. The coverage/lcov.info file is empty."
+    exit 1
+fi
