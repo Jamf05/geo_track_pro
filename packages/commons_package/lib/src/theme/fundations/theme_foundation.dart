@@ -16,7 +16,9 @@ class ThemeFoundation {
     appBarTheme: AppBarTheme(
       elevation: 1,
       centerTitle: true,
-      titleTextStyle: FontsFoundation.of(Brightness.light).appBar.pageTitle,
+      titleTextStyle: FontsFoundation.of(
+        Brightness.light,
+      ).theme.appBar.pageTitle,
       backgroundColor: ColorsFoundation.primaryC,
     ),
     /**
@@ -53,7 +55,9 @@ class ThemeFoundation {
       * titleMedium
       */
     textTheme: TextTheme(
-      titleMedium: FontsFoundation.of(Brightness.light).inputDecoration.style,
+      titleMedium: FontsFoundation.of(
+        Brightness.light,
+      ).theme.inputDecoration.style,
     ),
     /**
      * inputDecorationTheme
@@ -67,13 +71,15 @@ class ThemeFoundation {
       focusedErrorBorder: StylesFoundation.inputBorder.focusedErrorBorder,
       filled: true,
       fillColor: ColorsToken.white,
-      hintStyle: FontsFoundation.of(Brightness.light).inputDecoration.hintStyle,
+      hintStyle: FontsFoundation.of(
+        Brightness.light,
+      ).theme.inputDecoration.hintStyle,
       labelStyle: FontsFoundation.of(
         Brightness.light,
-      ).inputDecoration.labelStyle,
+      ).theme.inputDecoration.labelStyle,
       errorStyle: FontsFoundation.of(
         Brightness.light,
-      ).inputDecoration.errorStyle,
+      ).theme.inputDecoration.errorStyle,
     ),
     /**
      * checkboxTheme
@@ -143,7 +149,9 @@ class ThemeFoundation {
       elevation: 1,
       centerTitle: true,
       foregroundColor: ColorsToken.white,
-      titleTextStyle: FontsFoundation.of(Brightness.dark).appBar.pageTitle,
+      titleTextStyle: FontsFoundation.of(
+        Brightness.dark,
+      ).theme.appBar.pageTitle,
     ),
     /**
      * brightness
@@ -179,7 +187,9 @@ class ThemeFoundation {
       * titleMedium
       */
     textTheme: TextTheme(
-      titleMedium: FontsFoundation.of(Brightness.dark).inputDecoration.style,
+      titleMedium: FontsFoundation.of(
+        Brightness.dark,
+      ).theme.inputDecoration.style,
     ),
     /**
      * inputDecorationTheme
@@ -193,13 +203,15 @@ class ThemeFoundation {
       focusedErrorBorder: StylesFoundation.inputBorder.focusedErrorBorder,
       filled: true,
       fillColor: ColorsFoundation.background.dark,
-      hintStyle: FontsFoundation.of(Brightness.dark).inputDecoration.hintStyle,
+      hintStyle: FontsFoundation.of(
+        Brightness.dark,
+      ).theme.inputDecoration.hintStyle,
       labelStyle: FontsFoundation.of(
         Brightness.dark,
-      ).inputDecoration.labelStyle,
+      ).theme.inputDecoration.labelStyle,
       errorStyle: FontsFoundation.of(
         Brightness.dark,
-      ).inputDecoration.errorStyle,
+      ).theme.inputDecoration.errorStyle,
     ),
     /**
      * checkboxTheme

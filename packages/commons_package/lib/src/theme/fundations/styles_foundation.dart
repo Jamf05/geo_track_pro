@@ -55,7 +55,7 @@ class StylesFoundation {
     padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
     backgroundColor: ColorsFoundation.primary,
     disabledBackgroundColor: ColorsFoundation.action.disabledTransparent,
-    textStyle: FontsFoundation.of(brightness).elevatedButton.primary,
+    textStyle: FontsFoundation.of(brightness).theme.elevatedButton.primary,
     shape: RoundedRectangleBorder(
       borderRadius: StylesToken.borderR16,
       side: StylesToken.borderSW1.copyWith(color: Colors.transparent),
@@ -72,7 +72,7 @@ class StylesFoundation {
         ? ColorsFoundation.secondaryA
         : ColorsFoundation.primaryA,
     disabledBackgroundColor: ColorsFoundation.action.disabledSolid,
-    textStyle: FontsFoundation.of(brightness).elevatedButton.primaryA,
+    textStyle: FontsFoundation.of(brightness).theme.elevatedButton.primaryA,
     shape: RoundedRectangleBorder(
       borderRadius: StylesToken.borderR16,
       side: StylesToken.borderSW1.copyWith(color: Colors.transparent),
@@ -86,7 +86,7 @@ class StylesFoundation {
         padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
         backgroundColor: ColorsFoundation.primaryA,
         disabledBackgroundColor: ColorsFoundation.action.disabledTransparent,
-        textStyle: FontsFoundation.of(brightness).elevatedButton.primaryA,
+        textStyle: FontsFoundation.of(brightness).theme.elevatedButton.primaryA,
         shape: RoundedRectangleBorder(
           borderRadius: StylesToken.borderR16,
           side: StylesToken.borderSW1.copyWith(color: Colors.transparent),
@@ -105,7 +105,7 @@ class StylesFoundation {
     disabledBackgroundColor: brightness == Brightness.dark
         ? ColorsFoundation.background.white
         : ColorsFoundation.action.disabledTransparent,
-    textStyle: FontsFoundation.of(brightness).elevatedButton.primaryB,
+    textStyle: FontsFoundation.of(brightness).theme.elevatedButton.primaryB,
     shape: RoundedRectangleBorder(
       borderRadius: StylesToken.borderR16,
       side: StylesToken.borderSW1.copyWith(color: Colors.transparent),
@@ -116,12 +116,12 @@ class StylesFoundation {
     elevation: 0,
     foregroundColor: FontsFoundation.of(
       brightness,
-    ).elevatedButton.primaryB.color,
+    ).theme.elevatedButton.primaryB.color,
     disabledForegroundColor: ColorsFoundation.action.disabledTransparent,
     padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
     backgroundColor: ColorsFoundation.of(brightness).toggleSwitch.witheAndBlack,
     disabledBackgroundColor: ColorsFoundation.action.disabledTransparent,
-    textStyle: FontsFoundation.of(brightness).elevatedButton.primaryB,
+    textStyle: FontsFoundation.of(brightness).theme.elevatedButton.primaryB,
     shape: RoundedRectangleBorder(
       borderRadius: StylesToken.borderR16,
       side: StylesToken.borderSW1.copyWith(color: Colors.transparent),
@@ -135,7 +135,7 @@ class StylesFoundation {
         ? ColorsFoundation.action.darkNegative
         : ColorsFoundation.action.negative,
     disabledBackgroundColor: ColorsFoundation.action.disabledSolid,
-    textStyle: FontsFoundation.of(brightness).elevatedButton.negative,
+    textStyle: FontsFoundation.of(brightness).theme.elevatedButton.negative,
     shape: RoundedRectangleBorder(
       borderRadius: StylesToken.borderR16,
       side: StylesToken.borderSW1.copyWith(color: Colors.transparent),
@@ -147,11 +147,11 @@ class StylesFoundation {
   ButtonStyle get textButtonStyleWhite => TextButton.styleFrom(
     foregroundColor: FontsFoundation.of(
       brightness,
-    ).textButton.whiteAndBlack.color,
+    ).theme.textButton.whiteAndBlack.color,
     disabledForegroundColor: ColorsFoundation.action.disabledTransparent,
     padding: const EdgeInsets.all(5.0),
     backgroundColor: Colors.transparent,
-    textStyle: FontsFoundation.of(brightness).textButton.whiteAndBlack,
+    textStyle: FontsFoundation.of(brightness).theme.textButton.whiteAndBlack,
     shape: RoundedRectangleBorder(
       borderRadius: StylesToken.borderR16,
       side: StylesToken.borderSW1.copyWith(color: Colors.transparent),
@@ -163,7 +163,7 @@ class StylesFoundation {
     disabledForegroundColor: ColorsFoundation.action.positive,
     padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
     backgroundColor: ColorsFoundation.of(brightness).toggleSwitch.witheAndBlack,
-    textStyle: FontsFoundation.of(brightness).textButton.positive,
+    textStyle: FontsFoundation.of(brightness).theme.textButton.positive,
     shape: RoundedRectangleBorder(
       borderRadius: StylesToken.borderR16,
       side: StylesToken.borderSW1.copyWith(color: Colors.transparent),
@@ -172,7 +172,7 @@ class StylesFoundation {
 
   ButtonStyle get textButtonStyleModalSelectItem => TextButton.styleFrom(
     elevation: 0,
-    textStyle: FontsFoundation.of(brightness).paragraph.b2R16,
+    textStyle: FontsFoundation.of(brightness).theme.paragraph.b2R16,
     foregroundColor: brightness == Brightness.dark
         ? ColorsFoundation.text.white
         : ColorsFoundation.secondaryC,
@@ -185,7 +185,7 @@ class StylesFoundation {
 
   ButtonStyle get textButtonStyleModalCancel => TextButton.styleFrom(
     elevation: 0,
-    textStyle: FontsFoundation.of(brightness).paragraph.b2R16,
+    textStyle: FontsFoundation.of(brightness).theme.paragraph.b2R16,
     foregroundColor: brightness == Brightness.dark
         ? ColorsFoundation.background.white
         : ColorsFoundation.background.black,
@@ -198,7 +198,7 @@ class StylesFoundation {
 
   ButtonStyle get textButtonStyleModalCancelCalendar => TextButton.styleFrom(
     elevation: 0,
-    textStyle: FontsFoundation.of(brightness).paragraph.b2R16,
+    textStyle: FontsFoundation.of(brightness).theme.paragraph.b2R16,
     foregroundColor: brightness == Brightness.dark
         ? ColorsFoundation.background.white
         : ColorsFoundation.background.black,
@@ -217,7 +217,7 @@ class StylesFoundation {
     padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
     backgroundColor: ColorsFoundation.background.white,
     disabledBackgroundColor: ColorsFoundation.text.whiteGrey,
-    textStyle: FontsFoundation.of(brightness).outlinedButton.primaryB,
+    textStyle: FontsFoundation.of(brightness).theme.outlinedButton.primaryB,
     shape: RoundedRectangleBorder(
       borderRadius: StylesToken.borderR16,
       side: StylesToken.borderSW2.copyWith(color: ColorsFoundation.primaryB),
@@ -231,7 +231,7 @@ class StylesFoundation {
     padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
     backgroundColor: ColorsFoundation.background.white,
     disabledBackgroundColor: ColorsFoundation.text.whiteGrey,
-    textStyle: FontsFoundation.of(brightness).outlinedButton.primaryB,
+    textStyle: FontsFoundation.of(brightness).theme.outlinedButton.primaryB,
     shape: RoundedRectangleBorder(
       borderRadius: StylesToken.borderR16,
       side: StylesToken.borderSW2.copyWith(

@@ -1,7 +1,7 @@
 import 'package:dio/dio.dart';
 import 'package:equatable/equatable.dart';
 
-abstract class Failure implements EquatableMixin {
+abstract class Failure implements Equatable {
   String get message;
 
   @override

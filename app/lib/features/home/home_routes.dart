@@ -6,6 +6,7 @@ import 'package:home_package/home_package.dart' as home_package;
 final class HomeRoutes {
   static const String whiteRoute = '/white-home';
 
+  // ignore: avoid-unused-parameters
   static Widget buildWhitePage(BuildContext context, GoRouterState state) {
     return const home_package.WhitePage();
   }

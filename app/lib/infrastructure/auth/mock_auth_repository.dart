@@ -74,7 +74,7 @@ class MockAuthRepository implements AuthRepository {
 
     return Result.success(
       UserEntity(
-        id: user['id']!,
+        userId: user['id']!,
         email: user['email']!,
         name: user['name']!,
       ),

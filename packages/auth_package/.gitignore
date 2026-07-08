@@ -51,7 +51,7 @@ app.*.map.json
 *.g.dart
 
 # FVM Version Cache
-.fvm/
+.fvm/*
 
 # AI
 .agents/

@@ -46,12 +46,12 @@ app.*.map.json
 
 # flutter_gen
 **/gen/
-# **/generated/*
-# !**/generated/generated.dart
+**/generated/*
+!**/generated/generated.dart
 *.g.dart
 
 # FVM Version Cache
-.fvm/
+.fvm/*
 
 # AI
 .agents/
