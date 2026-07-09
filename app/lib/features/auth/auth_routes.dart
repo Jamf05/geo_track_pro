@@ -1,4 +1,5 @@
 import 'package:auth_package/auth_package.dart';
+import 'package:commons_package/common_package.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -6,7 +7,8 @@ import 'package:go_router/go_router.dart';
 import '../../infrastructure/auth/mock_auth_repository.dart';
 
 AuthPresenter _createAuthPresenter() {
-  final repo = MockAuthRepository();
+  final ConnectivityFactory connectivity = ConnectivityFactory.build();
+  final repo = MockAuthRepository(connectivity);
 
   return AuthPresenter(
     loginUseCase: LoginUseCase(repo),

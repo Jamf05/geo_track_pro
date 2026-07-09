@@ -1,3 +1,6 @@
+import 'connectivity_factory.dart';
+
 abstract class Repository {
-  const Repository();
+  final ConnectivityFactory connectivity;
+  const Repository(this.connectivity);
 }

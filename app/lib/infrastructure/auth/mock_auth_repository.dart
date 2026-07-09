@@ -1,7 +1,6 @@
 import 'package:auth_package/auth_package.dart';
 import 'package:commons_package/common_package.dart';
 
-
 class MockAuthRepository implements AuthRepository {
   final List<Map<String, String>> _mockUsers = [
     {
@@ -24,23 +23,23 @@ class MockAuthRepository implements AuthRepository {
     },
   ];
 
+  final ConnectivityFactory connectivity;
+  
+  MockAuthRepository(this.connectivity);
+
   @override
   Future<Result<UserEntity>> login(LoginRequestDto dto) async {
     await Future<void>.delayed(const Duration(seconds: 2));
 
     if (dto.email == 'error@example.com') {
       return Result.error(
-        ExceptionFailure.decode(
-          Exception('Error de conexión con el servidor'),
-        ),
+        ExceptionFailure.decode(Exception('Error de conexión con el servidor')),
       );
     }
 
     if (dto.email == 'wrong@example.com') {
       return Result.error(
-        ExceptionFailure.decode(
-          Exception('Credenciales inválidas'),
-        ),
+        ExceptionFailure.decode(Exception('Credenciales inválidas')),
       );
     }
 
@@ -48,27 +47,21 @@ class MockAuthRepository implements AuthRepository {
 
     if (userMap.isEmpty) {
       return Result.error(
-        ExceptionFailure.decode(
-          Exception('Usuario no encontrado'),
-        ),
+        ExceptionFailure.decode(Exception('Usuario no encontrado')),
       );
     }
 
     final user = userMap.firstOrNull;
 
-    if(user == null) {
+    if (user == null) {
       return Result.error(
-        ExceptionFailure.decode(
-          Exception('FATAL ERROR: user is null'),
-        ),
+        ExceptionFailure.decode(Exception('FATAL ERROR: user is null')),
       );
     }
 
     if (user['password'] != dto.password) {
       return Result.error(
-        ExceptionFailure.decode(
-          Exception('Contraseña incorrecta'),
-        ),
+        ExceptionFailure.decode(Exception('Contraseña incorrecta')),
       );
     }
 

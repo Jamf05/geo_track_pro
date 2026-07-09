@@ -4,6 +4,8 @@ import '../dto/login_request_dto.dart';
 import '../entity/user_entity.dart';
 
 abstract class AuthRepository extends Repository {
+  AuthRepository(super.connectivity);
+
   Future<Result<UserEntity>> login(LoginRequestDto dto);
   Future<void> logout();
 }
